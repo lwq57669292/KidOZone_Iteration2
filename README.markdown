@@ -15,14 +15,14 @@ For _Iteration 2_
 The Construction of the Project
 
 - Basic package
-	com.hellofit.kidozone
-			\*.activityService (The Activity & Fragment)
-			\*.entity (The entity of the project)
-			\*.common (The tools & calculate methods of the project)
+	com.hellofit.kidozone<br>
+			\*.activityService (The Activity & Fragment)<br>
+			\*.entity (The entity of the project)<br>
+			\*.common (The tools & calculate methods of the project)<br><br>
 			
 - Resource package
-	res
-		\*.drawable (The pictures which are used in the project)
-		\*.layout (The layout files of the Activity & Fragment)
-		\*.mipmap (The icon pictures - include round and square)
-		\*.values (The basic design elements)
+	res<br>
+		\*.drawable (The pictures which are used in the project)<br>
+		\*.layout (The layout files of the Activity & Fragment)<br>
+		\*.mipmap (The icon pictures - include round and square)<br>
+		\*.values (The basic design elements)<br>
