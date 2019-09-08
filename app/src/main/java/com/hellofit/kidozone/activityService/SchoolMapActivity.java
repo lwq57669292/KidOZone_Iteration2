@@ -34,7 +34,7 @@ public class SchoolMapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.school_map_activity);
+        setContentView(R.layout.activity_school_map);
 
         editText = (EditText) findViewById(R.id.editText) ;
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);

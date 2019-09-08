@@ -1,20 +1,16 @@
 package com.hellofit.kidozone.activityService;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 import com.hellofit.kidozone.R;
 
-/***
- * The Activity for the first view to display the map to the user
- *
- */
-public class MapViewActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map_view);
+        setContentView(R.layout.activity_welcome_page);
     }
 }
