@@ -14,13 +14,13 @@ For _Iteration 2_
 
 The Construction of the Project
 
-- Basic package
+- Basic package:<br>
 	com.hellofit.kidozone<br>
 			\*.activityService (The Activity & Fragment)<br>
 			\*.entity (The entity of the project)<br>
 			\*.common (The tools & calculate methods of the project)<br><br>
 			
-- Resource package
+- Resource package:<br>
 	res<br>
 		\*.drawable (The pictures which are used in the project)<br>
 		\*.layout (The layout files of the Activity & Fragment)<br>
