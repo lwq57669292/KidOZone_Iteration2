@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hellofit.kidozone.ui.PuzzleLayout
+        android:id="@+id/puzzleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+
+    <Button
+        android:id="@+id/btnAddLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/puzzleLayout"
+        android:background="@drawable/button_style4"
+        android:gravity="center_horizontal"
+        android:text="Next Image."
+        android:textAllCaps="false" />
+
+</RelativeLayout>

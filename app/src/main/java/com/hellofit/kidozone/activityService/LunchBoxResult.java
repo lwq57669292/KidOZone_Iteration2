@@ -1,16 +1,16 @@
 package com.hellofit.kidozone.activityService;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.hellofit.kidozone.R;
 
-public class GameChooseActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class LunchBoxResult extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_choose);
+        setContentView(R.layout.lunch_result);
+
     }
 }
