@@ -6,11 +6,6 @@ import com.hellofit.kidozone.ui.PuzzleLayout;
 
 import androidx.annotation.NonNull;
 
-/**
- * @Author Zaifeng
- * @Create 2017/7/13 0013
- * @Description Content
- */
 
 public class PuzzleGame implements PuzzleLayout.SuccessListener {
 

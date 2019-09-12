@@ -3,9 +3,7 @@ package com.hellofit.kidozone.module;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
 
-/**
- * Created by Administrator on 2016/9/8 0008.
- */
+
 public class ImagePiece {
 
     private int index;

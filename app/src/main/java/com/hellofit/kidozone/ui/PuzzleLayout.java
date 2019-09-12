@@ -23,11 +23,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * @Author Zaifeng
- * @Create 2017/7/13 0013
- * @Description Content
- */
 
 public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
 
@@ -35,43 +30,31 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     private static final int DEFAULT_MARGIN = 3;
 
 
-    //拼图布局为正方形，宽度为屏幕的宽度
     private int mViewWidth = 0;
 
-    //拼图游戏每一行的图片个数(默认为三个)
+    //number of picture in one line
     private int mCount = 2;
 
-    //每张图片的宽度
     private int mItemWidth;
 
-    //拼图游戏bitmap集合
     private List<ImagePiece> mImagePieces;
 
-    //用于给每个图片设置大小
     private FrameLayout.LayoutParams layoutParams;
 
-    //大图
     private Bitmap mBitmap;
 
-    //动画层
     private RelativeLayout mAnimLayout;
 
-    //小图之间的margin
     private int mMargin;
 
-    //这个view的padding
     private int mPadding;
 
-    //选中的第一张图片
     private ImageView mFirst;
 
-    //选中的第二张图片
     private ImageView mSecond;
 
-    //是否添加了动画层
     private boolean isAddAnimatorLayout = false;
 
-    //是否正在进行动画
     private boolean isAnimation = false;
 
     private int res = R.drawable.greenbin;
@@ -110,8 +93,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
         }
     }
 
-    /**
-     * 初始化初始变量
+    /*
      *
      * @param context
      */
@@ -123,7 +105,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * 将大图切割成多个小图
+     * spilt the image
      */
     private void initBitmaps() {
         if (mBitmap == null) {
@@ -134,7 +116,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * 对ImagePieces进行排序
+     *Sort the ImagePieces
      */
     private void sortImagePieces() {
         try {
@@ -150,7 +132,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * 设置图片的大小和layout的属性
+     * set size of image and the attribute of layout
      */
     private void initBitmapsWidth() {
         int line = 0;
@@ -189,13 +171,13 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (isAnimation) {
-            //还在运行动画的时候，不允许点击
+
             return;
         }
         if (!(v instanceof ImageView)) {
             return;
         }
-        //点的是同一个View
+
         if (mFirst == v) {
             mFirst.setColorFilter(null);
             mFirst = null;
@@ -203,7 +185,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
         }
         if (mFirst == null) {
             mFirst = (ImageView) v;
-            //选中之后添加一层颜色
+
             mFirst.setColorFilter(Color.parseColor("#55FF0000"));
         } else {
             mSecond = (ImageView) v;
@@ -225,15 +207,15 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * 添加动画层，并且添加平移的动画
+     * animation view add
      */
     private void exChangeView() {
 
-        //添加动画层
+
         setUpAnimLayout();
-        //添加第一个图片
+
         ImageView first = addAnimationImageView(mFirst);
-        //添加另一个图片
+
         ImageView second = addAnimationImageView(mSecond);
 
         ObjectAnimator secondXAnimator = ObjectAnimator.ofFloat(second, "TranslationX", 0f, -(mSecond.getLeft() - mFirst.getLeft()));
@@ -295,8 +277,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * 构造动画层 用于点击之后的动画
-     * 为什么要做动画层？ 要保证动画在整个view上面执行。
+     * set animation click
      */
     private void setUpAnimLayout() {
         if (mAnimLayout == null) {
@@ -309,7 +290,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * 检测是否成功
+     * check success or not
      */
     private boolean checkSuccess() {
 

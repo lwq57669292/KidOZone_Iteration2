@@ -7,9 +7,6 @@ import android.os.Bundle;
 
 import com.hellofit.kidozone.R;
 
-/**
- * Created by Axe on 2017/7/15.
- */
 
 public class SuccessDialog extends DialogFragment {
 
