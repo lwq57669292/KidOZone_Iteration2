@@ -46,7 +46,6 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
     private RelativeLayout mAnimLayout;
 
     private int mMargin;
-
     private int mPadding;
 
     private ImageView mFirst;
@@ -57,7 +56,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
 
     private boolean isAnimation = false;
 
-    private int res = R.drawable.greenbin;
+    private int res = R.drawable.puzzledefault;
 
     public PuzzleLayout(Context context) {
         this(context, null);
@@ -165,6 +164,53 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
             mImagePieces.get(i).setImageView(imageView);
             addView(imageView);
         }
+    }
+
+
+    public void reset() {
+        mItemWidth = (mViewWidth - mPadding * 2 - mMargin * (mCount - 1)) / mCount;
+        if (mImagePieces != null) {
+            mImagePieces.clear();
+        }
+        isAddAnimatorLayout = false;
+        mBitmap = null;
+        removeAllViews();
+        initBitmaps();
+        initBitmapsWidth();
+    }
+
+    /**
+     * Add count maximum is 3
+     */
+    public boolean addCount() {
+        mCount++;
+        if (mCount > 3) {
+            mCount--;
+            return false;
+        }
+        reset();
+        return true;
+    }
+
+    /**
+     * change image
+     */
+    public void changeRes(int res) {
+        this.res = res;
+        reset();
+    }
+
+    /**
+     * reduce count at least 2 in line
+     */
+    public boolean reduceCount() {
+        mCount--;
+        if (mCount < 2) {
+            mCount++;
+            return false;
+        }
+        reset();
+        return true;
     }
 
 

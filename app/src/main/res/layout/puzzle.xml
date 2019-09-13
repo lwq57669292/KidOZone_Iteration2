@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageAnimal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/animal1"
+        android:scaleType="fitXY"/>
+
+
+
+    <Button
+        android:id="@+id/animal"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/imageAnimal"
+        android:background="@drawable/button_style6"
+        android:text="New animal friends!"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+
+
+    <ImageButton
+        android:id="@+id/imageSport"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/animal"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/sport1"
+        android:scaleType="fitXY" />
+
+
+
+    <Button
+        android:id="@+id/sport"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageSport"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style6"
+        android:text="Australia sports"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sport"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/fitin1"
+        android:scaleType="fitXY" />
+
+
+
+    <Button
+        android:id="@+id/View"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style6"
+        android:text="Wanting to fit in"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+
+
+
+</RelativeLayout>
