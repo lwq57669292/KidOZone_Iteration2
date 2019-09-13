@@ -1,25 +1,20 @@
 package com.hellofit.kidozone.game;
 
-/**
- * @Author Zaifeng
- * @Create 2017/7/13 0013
- * @Description Content
- */
 
 public interface Game {
 
     /**
-     * 增加难度
+     * Add level
      */
     public void addLevel();
 
     /**
-     * 减少难度
+     * Reduce level
      */
     public void reduceLevel();
 
     /**
-     * 修改图片
+     * Change image
      *
      * @param res
      */
