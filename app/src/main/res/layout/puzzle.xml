@@ -10,7 +10,7 @@
         android:id="@+id/imageAnimal"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/animal1"
         android:scaleType="fitXY"/>
@@ -35,9 +35,9 @@
         android:id="@+id/imageSport"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
         android:layout_below="@+id/animal"
-        android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/sport1"
         android:scaleType="fitXY" />
 
@@ -47,9 +47,9 @@
         android:id="@+id/sport"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageSport"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
         android:background="@drawable/button_style5"
         android:text="Australia sports"
         android:textAllCaps="false"
@@ -60,10 +60,11 @@
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/sport"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/fitin1"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@+id/imageSport"
+        android:layout_below="@+id/animal"
+        app:srcCompat="@drawable/view1"
         android:scaleType="fitXY" />
 
 
@@ -72,14 +73,24 @@
         android:id="@+id/View"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageView"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="55dp"
+        android:layout_toRightOf="@+id/sport"
         android:background="@drawable/button_style5"
-        android:text="Wanting to fit in"
+        android:text="Australia views"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Back"
+        android:background="@drawable/button_style1"/>
 
 
 

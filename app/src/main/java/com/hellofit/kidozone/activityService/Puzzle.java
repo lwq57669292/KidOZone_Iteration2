@@ -79,7 +79,15 @@ public class Puzzle extends AppCompatActivity {
             }
         });
 
+        Button backButton = (Button) findViewById(R.id.backButton);
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(Puzzle.this, MainActivity.class);
+                startActivityForResult(intent, 1);
+            }
+        });
 
 
     }
