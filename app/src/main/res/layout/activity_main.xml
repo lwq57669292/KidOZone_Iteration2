@@ -37,7 +37,7 @@
         android:textStyle="italic" />
 
     <ImageButton
-        android:id="@+id/imageLunchGame"
+        android:id="@+id/imagePuzzleGame"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_below="@+id/textView"
@@ -45,17 +45,17 @@
         android:layout_marginTop="25dp"
         android:background="#00000000"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/lunchgame" />
+        app:srcCompat="@drawable/puzzlegame" />
 
     <Button
-        android:id="@+id/LunchGame"
+        android:id="@+id/PuzzleGame"
         android:layout_width="160dp"
         android:layout_height="38dp"
-        android:layout_below="@+id/imageLunchGame"
+        android:layout_below="@+id/imagePuzzleGame"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:background="@drawable/button_style6"
-        android:text="LunchBox"
+        android:text="Puzzle Game"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
         android:textSize="14sp" />
@@ -85,25 +85,25 @@
         android:textSize="14sp" />
 
     <ImageButton
-        android:id="@+id/imagePuzzleGame"
+        android:id="@+id/imageLunchGame"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/imageWasteGame"
+        android:layout_below="@+id/imagePuzzleGame"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:background="#00000000"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/puzzlegame" />
+        app:srcCompat="@drawable/lunchgame" />
 
     <Button
-        android:id="@+id/PuzzleGame"
+        android:id="@+id/LunchGame"
         android:layout_width="160dp"
         android:layout_height="38dp"
-        android:layout_below="@+id/imagePuzzleGame"
+        android:layout_below="@+id/imageLunchGame"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:background="@drawable/button_style6"
-        android:text="Puzzle Game"
+        android:text="LunchBox"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
         android:textSize="14sp" />

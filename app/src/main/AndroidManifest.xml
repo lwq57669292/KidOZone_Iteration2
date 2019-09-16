@@ -34,7 +34,8 @@
         <activity
             android:name=".activityService.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
