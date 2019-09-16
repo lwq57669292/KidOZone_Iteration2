@@ -4,8 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activityService.MainActivity"
-    android:background="@drawable/mainbackground">
+    android:background="@drawable/mainbackground"
+    tools:context=".activityService.MainActivity">
+
+    <Button
+        android:id="@+id/PuzzleGame"
+        android:layout_width="160dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/imagePuzzleGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style6"
+        android:text="Puzzle Game"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/WasteGame"
+        android:layout_width="160dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/imageWasteGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style6"
+        android:text="Waste type"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/LunchGame"
+        android:layout_width="160dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/imageLunchGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style6"
+        android:text="LunchBox"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/imagePuzzleGame"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/puzzlegame" />
+
+    <ImageButton
+        android:id="@+id/imageWasteGame"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageLunchGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/wastegame" />
+
+    <ImageButton
+        android:id="@+id/imageLunchGame"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imagePuzzleGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/lunchgame" />
 
     <TextView
         android:id="@+id/empty1"
@@ -24,89 +97,25 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="KidOZone Games"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:text="KidOZone Games"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="italic" />
 
-    <ImageButton
-        android:id="@+id/imagePuzzleGame"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/textView"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="113dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/WasteGame"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:background="#00000000"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/puzzlegame" />
-
-    <Button
-        android:id="@+id/PuzzleGame"
-        android:layout_width="160dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/imagePuzzleGame"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/button_style6"
-        android:text="Puzzle Game"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="14sp" />
-
-    <ImageButton
-        android:id="@+id/imageWasteGame"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/imageLunchGame"
-        android:layout_marginTop="60dp"
-        android:background="#00000000"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/wastegame" />
-
-    <Button
-        android:id="@+id/WasteGame"
-        android:layout_width="160dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/imageWasteGame"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/button_style6"
-        android:text="Waste type"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="14sp" />
-
-    <ImageButton
-        android:id="@+id/imageLunchGame"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/imagePuzzleGame"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:background="#00000000"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/lunchgame" />
-
-    <Button
-        android:id="@+id/LunchGame"
-        android:layout_width="160dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/imageLunchGame"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/button_style6"
-        android:text="LunchBox"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent"
-        android:textSize="14sp" />
+        android:layout_marginTop="20dp"
+        android:text="" />
 
 
 </RelativeLayout>

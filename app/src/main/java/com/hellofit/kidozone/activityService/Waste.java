@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hellofit.kidozone.R;
@@ -24,6 +25,7 @@ public class Waste extends AppCompatActivity {
     private float downX;
     private float downY;
     private int i;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,18 +43,27 @@ public class Waste extends AppCompatActivity {
             }
         });
 
-        int[] imageSoursWaste = {R.drawable.banana_1f34c};
+        String[] wasteName = {"Banana", "Bone", "Bread", "Books", "Egg Shell", "Leaf"};
+        int[] imageSoursWaste = {R.drawable.banana_1f34c, R.drawable.bone_1f9b4, R.drawable.bread, R.drawable.books, R.drawable.egg_shell, R.drawable.leaf_3};
+        TextView textView = (TextView) findViewById(R.id.rubbishName);
+        textView.setText(wasteName[i]);
         ImageView imageView = (ImageView) findViewById(R.id.rubbish);
         imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i]));
-        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
-        imageView.startAnimation(shake);
+        TextView textView1 = (TextView) findViewById(R.id.wasteScore);
+        score=100;
+        textView1.setText("Score: "+ score);
+
 
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         String action = "";
-        String[] wasteType = {"greenBin"};
+        String[] wasteType = {"redBin", "redBin", "redBin", "yellowBin", "redBin", "greenBin"};
+        String[] wasteName = {"Banana", "Bone", "Bread", "Books", "Egg Shell", "Leaf"};
+        int[] imageSoursWaste = {R.drawable.banana_1f34c, R.drawable.bone_1f9b4, R.drawable.bread, R.drawable.books, R.drawable.egg_shell, R.drawable.leaf_3};
+        ImageView imageView = (ImageView) findViewById(R.id.rubbish);
+        TextView textView = (TextView) findViewById(R.id.rubbishName);
 
         float x = event.getX();
         float y = event.getY();
@@ -81,43 +92,108 @@ public class Waste extends AppCompatActivity {
                     mp.start();
 
                     int orientation = getOrientation(dx, dy);
-                    switch (orientation) {
-                        case 'r':
-                            if(wasteType[i]=="yellowBin") {
-                                Toast toast = Toast.makeText(Waste.this, "Added to the YellowBin!", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                toast.show();
-                            }
-                            else{
-                                Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                toast.show();
-                            }
-                            break;
-                        case 'l':
-                            if(wasteType[i]=="redBin") {
-                                Toast toast = Toast.makeText(Waste.this, "Added to the RedBin!", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                toast.show();
-                            }
-                            else{
-                                Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                toast.show();
-                            }
-                            break;
-                        case 't':
-                            if(wasteType[i]=="greenBin") {
-                                Toast toast = Toast.makeText(Waste.this, "Added to the GreenBin!", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                toast.show();
-                            }
-                            else{
-                                Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                toast.show();
-                            }
-                            break;
+                    if(i<6) {
+                        switch (orientation) {
+                            case 'r':
+                                if (wasteType[i] == "yellowBin") {
+                                    MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.great);
+                                    mp1.start();
+                                    Toast toast = Toast.makeText(Waste.this, "Added to the YellowBin!", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                    toast.show();
+                                    if (i < 5) {
+                                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i + 1]));
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        imageView.startAnimation(shake);
+                                        textView.setText(wasteName[i + 1]);
+                                        i++;
+                                    }
+                                    if (i == 5) {
+                                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i]));
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        imageView.startAnimation(shake);
+                                        textView.setText(wasteName[i]);
+                                        i++;
+                                    }
+                                } else {
+                                    MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.wrong);
+                                    mp1.start();
+                                    Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                    toast.show();
+                                    score = score - 5;
+                                    TextView textView1 = (TextView) findViewById(R.id.wasteScore);
+                                    textView1.setText("Score: "+ score);
+                                }
+                                break;
+                            case 'l':
+                                if (wasteType[i] == "redBin") {
+                                    MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.great);
+                                    mp1.start();
+                                    Toast toast = Toast.makeText(Waste.this, "Added to the RedBin!", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                    toast.show();
+                                    if (i < 5) {
+                                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i + 1]));
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        imageView.startAnimation(shake);
+                                        textView.setText(wasteName[i + 1]);
+                                        i++;
+                                    }
+                                    if (i == 5) {
+                                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i]));
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        imageView.startAnimation(shake);
+                                        textView.setText(wasteName[i]);
+                                        i++;
+                                    }
+                                } else {
+                                    MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.wrong);
+                                    mp1.start();
+                                    Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                    toast.show();
+                                    score = score - 5;
+                                    TextView textView1 = (TextView) findViewById(R.id.wasteScore);
+                                    textView1.setText("Score: "+ score);
+                                }
+                                break;
+                            case 't':
+                                if (wasteType[i] == "greenBin") {
+                                    MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.great);
+                                    mp1.start();
+                                    Toast toast = Toast.makeText(Waste.this, "Added to the GreenBin!", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                    toast.show();
+                                    if (i < 5) {
+                                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i + 1]));
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        imageView.startAnimation(shake);
+                                        textView.setText(wasteName[i + 1]);
+                                        i++;
+                                    }
+                                    if (i == 5) {
+                                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursWaste[i]));
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        imageView.startAnimation(shake);
+                                        textView.setText(wasteName[i]);
+                                        i++;
+                                    }
+                                } else {
+                                    MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.wrong);
+                                    mp1.start();
+                                    Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                    toast.show();
+                                    score = score - 5;
+                                    TextView textView1 = (TextView) findViewById(R.id.wasteScore);
+                                    textView1.setText("Score: "+ score);
+                                }
+                                break;
+                        }
+                    }else{
+                        imageView.setImageDrawable(null);
+                        textView.setText("");
                     }
                     // Display display = getWindowManager().getDefaultDisplay();
                     //   int height = display.getHeight();

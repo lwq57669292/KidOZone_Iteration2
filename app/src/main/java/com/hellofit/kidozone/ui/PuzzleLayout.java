@@ -303,7 +303,7 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
                 isAnimation = false;
                 invalidate();
                 if (checkSuccess()) {
-                    Toast.makeText(getContext(), "成功!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Success!", Toast.LENGTH_SHORT).show();
                     if (mSuccessListener != null) {
                         mSuccessListener.success();
                     }

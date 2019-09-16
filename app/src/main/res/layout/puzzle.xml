@@ -6,13 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/template"/>
+
+
+
     <ImageButton
         android:id="@+id/imageAnimal"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/animal1"
+        app:srcCompat="@drawable/animal11"
         android:scaleType="fitXY"/>
 
 
@@ -38,7 +47,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/animal"
-        app:srcCompat="@drawable/sport1"
+        app:srcCompat="@drawable/sport11"
         android:scaleType="fitXY" />
 
 
@@ -61,10 +70,10 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="80dp"
-        android:layout_marginLeft="60dp"
-        android:layout_toRightOf="@+id/imageSport"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         android:layout_below="@+id/animal"
-        app:srcCompat="@drawable/view1"
+        app:srcCompat="@drawable/view11"
         android:scaleType="fitXY" />
 
 
@@ -75,10 +84,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="55dp"
-        android:layout_toRightOf="@+id/sport"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
         android:background="@drawable/button_style5"
-        android:text="Australia views"
+        android:text="Australia attractions"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp" />
@@ -91,7 +100,6 @@
         android:layout_centerHorizontal="true"
         android:text="Back"
         android:background="@drawable/button_style1"/>
-
 
 
 </RelativeLayout>
