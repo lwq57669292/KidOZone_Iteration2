@@ -18,6 +18,17 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
 
     <Button
         android:id="@+id/backButton"
@@ -58,12 +69,12 @@
         app:srcCompat="@drawable/apple" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="72dp"
-        android:layout_height="54dp"
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="   /6"
+        android:text="0/6"
         android:textSize="24sp" />
 
 

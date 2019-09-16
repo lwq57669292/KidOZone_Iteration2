@@ -10,43 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa91f100-0e06-453c-8de3-88c09e6c51bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/animal11.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bone_1f9b4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/books.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bread.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/egg_shell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/leaf_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sport11.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/template.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/template1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/view11.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/animaldes.mpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/great.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/sportdes.mpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/swipe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/viewdes.mpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/wrong.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cola.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/corn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/egg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fresh_juice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/lettuce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sport1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/view1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/wastegameend.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBoxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBoxResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleSport.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleSport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Waste.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Waste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/ui/PuzzleLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/ui/PuzzleLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/animal11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bindescription.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/sport11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/sport3.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sport3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/view1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/view1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/view11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/view2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/view2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/puzzle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/puzzle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/animal1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/animal1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/sport1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/view1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/lunch_box.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/lunch_box.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/lunch_result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/lunch_result.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/waste.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/waste.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,21 +58,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Waste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+            <state relative-caret-position="-14">
+              <caret line="194" column="106" lean-forward="true" selection-start-line="194" selection-start-column="106" selection-end-line="194" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -93,8 +70,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+            <state relative-caret-position="1558">
+              <caret line="139" column="32" lean-forward="true" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#966#974#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleAnimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,13 +93,60 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/waste.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+            <state relative-caret-position="1023">
+              <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/dialog/SelectImageDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="59" column="81" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sport1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view11.jpeg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view1.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -171,19 +208,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Puzzle.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/puzzle_sport.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/puzzle_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/lunch_result.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/lunch_box.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/cycle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/shake.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/dialog/SuccessDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/MusicServer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBoxResult.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleAnimal.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleSport.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleView.java" />
@@ -191,6 +223,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/ui/PuzzleLayout.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/puzzle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/waste.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lunch_box.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lunch_result.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBoxResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Waste.java" />
       </list>
     </option>
@@ -209,35 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -444,6 +452,35 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KidOZone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KidOZone" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,12 +500,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\drawable" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\raw" />
-      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\layout" />
-      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\java\com\hellofit\kidozone" />
-      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res" />
+      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\drawable" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.hellofit.kidozone.activityService" />
@@ -482,9 +516,12 @@
       <recent name="com.hellofit.kidozone.Utils" />
       <recent name="com.hellofit.kidozone.ui" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\raw" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\drawable" />
+      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\raw" />
+      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res\layout" />
+      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\java\com\hellofit\kidozone" />
+      <recent name="E:\KidOZone_Iteration2\KidOZone\app\src\main\res" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -621,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568608126839</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modify game for the waste.">
+      <created>1568637524858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568637524858</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -634,11 +678,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20671141" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20628998" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -646,14 +690,14 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.4986577" weight="0.37818697" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4993225" weight="0.31652662" />
+      <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.4986577" weight="0.3391116" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4993225" weight="0.3163597" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Logcat" order="3" weight="0.32827735" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5013423" side_tool="true" weight="0.37818697" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49597314" weight="0.29461756" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49597314" visible="true" weight="0.30119178" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Find" order="9" sideWeight="0.49946237" weight="0.33586133" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.41603467" />
@@ -661,7 +705,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.44496644" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.45682302" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Assistant" order="6" weight="0.32995737" />
     </layout>
@@ -675,33 +719,11 @@
     <MESSAGE value="Modify some detail." />
     <MESSAGE value="Sliding game for the lunchbox and waste." />
     <MESSAGE value="Modify game for the lunchbox and waste." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify game for the lunchbox and waste." />
+    <MESSAGE value="Modify game for the waste." />
+    <MESSAGE value="Complete the logic for the waste and lunchbox game." />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete the logic for the waste and lunchbox game." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_style5.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_style4.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_style3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/mainbackground.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_style6.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -710,20 +732,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_select_image.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_list.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_style1.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -765,12 +787,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome_page.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/shake.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -813,85 +835,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/dialog/SelectImageDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="59" column="81" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/MusicServer.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lunch_result.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/swipe.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBoxResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/puzzle_sport.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1520">
           <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Puzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lunch_box.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleAnimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleSport.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -906,22 +868,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sport3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view11.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view11.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/ui/PuzzleLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -932,27 +879,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/animal11.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/animal11.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sport11.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/puzzle.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1805">
           <caret line="95" column="35" lean-forward="true" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/puzzle_animal.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleView.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -977,43 +922,135 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/puzzle_view.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/waste.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lunch_result.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lunch_box.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBoxResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2209">
+          <caret line="148" column="44" lean-forward="true" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
+          <folding>
+            <element signature="e#3725#3733#0" expanded="true" />
+            <element signature="e#4910#4918#0" expanded="true" />
+            <element signature="e#6219#6227#0" expanded="true" />
+            <element signature="e#7670#7678#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/dialog/SelectImageDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+        <state relative-caret-position="437">
+          <caret line="59" column="81" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/waste.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/animal1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/module/ImageSoures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sport1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sport1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view11.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/view1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/LunchBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="139" column="32" lean-forward="true" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#966#974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/PuzzleAnimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Puzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hellofit/kidozone/activityService/Waste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+        <state relative-caret-position="-14">
+          <caret line="194" column="106" lean-forward="true" selection-start-line="194" selection-start-column="106" selection-end-line="194" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

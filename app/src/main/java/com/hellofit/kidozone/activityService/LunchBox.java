@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hellofit.kidozone.R;
@@ -29,6 +30,9 @@ public class LunchBox extends AppCompatActivity {
     private float downX;
     private float downY;
     private int i;
+    private int count;
+    private Bundle bundle = new Bundle();
+    private ArrayList<String> pickList = new ArrayList<String>();
     //private ArrayList<String> list;
 
 
@@ -43,8 +47,7 @@ public class LunchBox extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LunchBox.this, LunchBoxResult.class);
-                Bundle bundle = new Bundle();
-                bundle.putInt("test", i-1);
+                bundle.putStringArrayList("pickItemList",pickList);
                 intent.putExtras(bundle);
                 startActivityForResult(intent, 1);
             }
@@ -65,6 +68,18 @@ public class LunchBox extends AppCompatActivity {
         imageView.startAnimation(shake);
 
         i = 0;
+        count=0;
+        TextView textView1 = (TextView) findViewById(R.id.count);
+        textView1.setText(count+"/6");
+
+        String[] foodName = {"Banana", "Beef", "Cherries", "Chicken", "Cake", "Cola","Corn","Egg","Fresh Juice","Lettuce"};
+        int[] imageSoursFood = {R.drawable.banana, R.drawable.beef, R.drawable.cherries, R.drawable.chicken,R.drawable.cake,R.drawable.cola,R.drawable.corn,R.drawable.egg,R.drawable.fresh_juice,R.drawable.lettuce};
+        TextView textView = (TextView) findViewById(R.id.foodName);
+        textView.setText(foodName[i]);
+        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
+
+
+
 
 
     }
@@ -74,7 +89,9 @@ public class LunchBox extends AppCompatActivity {
         String action = "";
 
         ImageView imageView = (ImageView) findViewById(R.id.Food);
-        int[] imageSoursFood = {R.drawable.banana, R.drawable.beef, R.drawable.cherries, R.drawable.chicken};
+        int[] imageSoursFood = {R.drawable.banana, R.drawable.beef, R.drawable.cherries, R.drawable.chicken,R.drawable.cake,R.drawable.cola,R.drawable.corn,R.drawable.egg,R.drawable.fresh_juice,R.drawable.lettuce};
+        TextView textView = (TextView) findViewById(R.id.foodName);
+        String[] foodName = {"Banana", "Beef", "Cherries", "Chicken", "Cake", "Cola","Corn","Egg","Fresh Juice","Lettuce"};
 
 
 
@@ -106,35 +123,43 @@ public class LunchBox extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(LunchBox.this, R.raw.shoop);
                     mp.start();
                     int orientation = getOrientation(dx, dy);
-                    if (orientation == 'r') {
-                        Toast toast = Toast.makeText(LunchBox.this, "Added to the lunchBox!", Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
-                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
-                        if (i < 3) {
-                            i++;
+                    if (count < 6) {
+                        if (orientation == 'r') {
+                            Toast toast = Toast.makeText(LunchBox.this, "Added to the lunchBox!", Toast.LENGTH_SHORT);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();
+                            pickList.add(String.valueOf(i));
+                            if (i < 9) {
+                                i++;
+                            }
+                            imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
+                            textView.setText(foodName[i]);
+                            count++;
+                            TextView textView1 = (TextView) findViewById(R.id.count);
+                            textView1.setText(count + "/6");
+                        } else {
+                            Toast toast1 = Toast.makeText(LunchBox.this, "Looks like u dont like it!", Toast.LENGTH_SHORT);
+                            toast1.setGravity(Gravity.CENTER, 0, 0);
+                            toast1.show();
+                            if (i < 9) {
+                                i++;
+                            }
+                            imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
+                            textView.setText(foodName[i]);
+
                         }
-                        //   int[] location = new int[2];
-                        //  imageView.getLocationInWindow(location);
-                        //  Animation heroTranslate = new TranslateAnimation(location[0]-150f,location[0],0f,0f);
-                        //   imageView.setAnimation(heroTranslate);
-                        //     heroTranslate.setDuration(1000);
-                        //     heroTranslate.start();
-                    } else {
-                        Toast toast1 = Toast.makeText(LunchBox.this, "Looks like u dont like it!", Toast.LENGTH_SHORT);
+                        // Display display = getWindowManager().getDefaultDisplay();
+                        //   int height = display.getHeight();
+                        //  Toast toast = Toast.makeText(LunchBox.this, "", Toast.LENGTH_SHORT);
+                        // toast.setGravity(Gravity.TOP, 0, 5 * (height / 8));
+                        //   toast.show();
+                    }else{
+                        Toast toast1 = Toast.makeText(LunchBox.this, "Your already pick 6,submit and see the score!", Toast.LENGTH_SHORT);
                         toast1.setGravity(Gravity.CENTER, 0, 0);
                         toast1.show();
-                        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
-                        if (i < 3) {
-                            i++;
-                        }
-
+                       // Intent intent1 = new Intent(LunchBox.this, LunchBoxResult.class);
+                        //startActivity(intent1);
                     }
-                    // Display display = getWindowManager().getDefaultDisplay();
-                    //   int height = display.getHeight();
-                    //  Toast toast = Toast.makeText(LunchBox.this, "", Toast.LENGTH_SHORT);
-                    // toast.setGravity(Gravity.TOP, 0, 5 * (height / 8));
-                    //   toast.show();
                 }
                 break;
         }
