@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -41,6 +43,8 @@ public class LunchBoxResult extends AppCompatActivity {
         int test = bundle.getInt("test");
         int[] imageSoursFood = {R.drawable.banana, R.drawable.beef, R.drawable.cherries, R.drawable.chicken};
         imageView1.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),imageSoursFood[test]));
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+        imageView1.startAnimation(shake);
 
 
     }

@@ -42,6 +42,9 @@ public class PuzzleView extends AppCompatActivity implements PuzzleGame.GameStat
             }
         });
 
+        MediaPlayer mp = MediaPlayer.create(PuzzleView.this, R.raw.viewdes);
+        mp.start();
+
 
 
     }

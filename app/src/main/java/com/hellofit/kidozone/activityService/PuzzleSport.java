@@ -42,6 +42,9 @@ public class PuzzleSport extends AppCompatActivity implements PuzzleGame.GameSta
             }
         });
 
+        MediaPlayer mp = MediaPlayer.create(PuzzleSport.this, R.raw.sportdes);
+        mp.start();
+
 
 
     }

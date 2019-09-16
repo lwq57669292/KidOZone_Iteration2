@@ -42,6 +42,9 @@ public class PuzzleAnimal extends AppCompatActivity implements PuzzleGame.GameSt
             }
         });
 
+        MediaPlayer mp = MediaPlayer.create(PuzzleAnimal.this, R.raw.animaldes);
+        mp.start();
+
 
     }
 
