@@ -1,6 +1,7 @@
 package com.hellofit.kidozone.activityService;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.hellofit.kidozone.R;
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
 
 }

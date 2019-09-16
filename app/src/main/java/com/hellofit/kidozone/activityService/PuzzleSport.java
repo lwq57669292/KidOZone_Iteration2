@@ -1,7 +1,10 @@
 package com.hellofit.kidozone.activityService;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +31,17 @@ public class PuzzleSport extends AppCompatActivity implements PuzzleGame.GameSta
         setContentView(R.layout.puzzle_sport);
         initView();
         initListener();
+
+        Button backButton = (Button) findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(PuzzleSport.this, Puzzle.class);
+                startActivityForResult(intent, 1);
+            }
+        });
+
 
 
     }
@@ -85,6 +99,8 @@ public class PuzzleSport extends AppCompatActivity implements PuzzleGame.GameSta
     public void gameSuccess(int level) {
         final SuccessDialog successDialog = new SuccessDialog();
         successDialog.show(getFragmentManager(), "successDialog");
+        MediaPlayer mp = MediaPlayer.create(PuzzleSport.this, R.raw.yeah);
+        mp.start();
         successDialog.addButtonClickListener(new SuccessDialog.OnButtonClickListener() {
             @Override
             public void nextLevelClick() {
