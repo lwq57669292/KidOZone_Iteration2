@@ -2,7 +2,9 @@ package com.hellofit.kidozone.activityService;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -17,8 +19,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.hellofit.kidozone.R;
+import com.hellofit.kidozone.common.RestClient;
+import com.hellofit.kidozone.common.SystemUtil;
+import com.hellofit.kidozone.entity.FoodInfo;
+import com.hellofit.kidozone.entity.WasteInfo;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,11 +39,11 @@ public class LunchBox extends AppCompatActivity {
 
     private float downX;
     private float downY;
-    private int i;
+    private int listIndex;
     private int count;
     private Bundle bundle = new Bundle();
-    private ArrayList<String> pickList = new ArrayList<String>();
-    //private ArrayList<String> list;
+    private ArrayList<FoodInfo> foodInfos;
+    private ArrayList<FoodInfo> pickedList;
 
 
     @Override
@@ -41,21 +51,36 @@ public class LunchBox extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lunch_box);
 
-        Button goResult = (Button) findViewById(R.id.finish);
+        // Initialize view component
+        Button btn_goResult = (Button) findViewById(R.id.finish);
+        Button btn_backButton = (Button) findViewById(R.id.backButton);
+        ImageView iv_foodImage = (ImageView) findViewById(R.id.Food);
+        TextView tv_userPickedSum = (TextView) findViewById(R.id.count);
+        TextView tv_foodName = (TextView) findViewById(R.id.foodName);
 
-        goResult.setOnClickListener(new View.OnClickListener() {
+        foodInfos = new ArrayList<FoodInfo>();
+        pickedList = new ArrayList<FoodInfo>();
+
+        // Load Waste data from SharedPreferences
+        SharedPreferences sp = getSharedPreferences("SystemSP", MODE_PRIVATE);
+        String json = sp.getString("foodList", null);
+        if (json != null) {
+            Gson gson = new Gson();
+            Type type = new TypeToken<ArrayList<FoodInfo>>() {}.getType();
+            foodInfos = gson.fromJson(json, type);
+        }
+
+        btn_goResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LunchBox.this, LunchBoxResult.class);
-                bundle.putStringArrayList("pickItemList",pickList);
+                bundle.putSerializable("pickItemList", pickedList);
                 intent.putExtras(bundle);
                 startActivityForResult(intent, 1);
             }
         });
 
-        Button backButton = (Button) findViewById(R.id.backButton);
-
-        backButton.setOnClickListener(new View.OnClickListener() {
+        btn_backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LunchBox.this, MainActivity.class);
@@ -63,44 +88,27 @@ public class LunchBox extends AppCompatActivity {
             }
         });
 
-        ImageView imageView = (ImageView) findViewById(R.id.Food);
+        listIndex = 0;
+        count = 0;
+
+        tv_userPickedSum.setText(count + " / 6");
+        tv_foodName.setText(foodInfos.get(listIndex).getFoodName());
+        Glide.with(this).load(foodInfos.get(listIndex).getFoodImage()).into(iv_foodImage);
         Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
-        imageView.startAnimation(shake);
-
-        i = 0;
-        count=0;
-        TextView textView1 = (TextView) findViewById(R.id.count);
-        textView1.setText(count+"/6");
-
-        String[] foodName = {"Banana", "Beef", "Cherries", "Chicken", "Cake", "Cola","Corn","Egg","Fresh Juice","Lettuce"};
-        int[] imageSoursFood = {R.drawable.banana, R.drawable.beef, R.drawable.cherries, R.drawable.chicken,R.drawable.cake,R.drawable.cola,R.drawable.corn,R.drawable.egg,R.drawable.fresh_juice,R.drawable.lettuce};
-        TextView textView = (TextView) findViewById(R.id.foodName);
-        textView.setText(foodName[i]);
-        imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
-
-
-
-
+        iv_foodImage.startAnimation(shake);
 
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        String action = "";
 
-        ImageView imageView = (ImageView) findViewById(R.id.Food);
-        int[] imageSoursFood = {R.drawable.banana, R.drawable.beef, R.drawable.cherries, R.drawable.chicken,R.drawable.cake,R.drawable.cola,R.drawable.corn,R.drawable.egg,R.drawable.fresh_juice,R.drawable.lettuce};
-        TextView textView = (TextView) findViewById(R.id.foodName);
-        String[] foodName = {"Banana", "Beef", "Cherries", "Chicken", "Cake", "Cola","Corn","Egg","Fresh Juice","Lettuce"};
-
-
-
+        ImageView iv_foodImage = (ImageView) findViewById(R.id.Food);
+        TextView tv_foodName = (TextView) findViewById(R.id.foodName);
 
         float x = event.getX();
         float y = event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-
 
                 downX = x;
                 downY = y;
@@ -119,46 +127,70 @@ public class LunchBox extends AppCompatActivity {
                 Log.e("Tag", "========Y axis Distance：" + dy);
                 if (Math.abs(dx) > 300 || Math.abs(dy) > 300) {
 
-
                     MediaPlayer mp = MediaPlayer.create(LunchBox.this, R.raw.shoop);
                     mp.start();
                     int orientation = getOrientation(dx, dy);
-                    if (count < 6) {
-                        if (orientation == 'r') {
-                            Toast toast = Toast.makeText(LunchBox.this, "Added to the lunchBox!", Toast.LENGTH_SHORT);
-                            toast.setGravity(Gravity.CENTER, 0, 0);
-                            toast.show();
-                            pickList.add(String.valueOf(i));
-                            if (i < 9) {
-                                i++;
+                    if (listIndex < foodInfos.size() && !pickedList.contains(foodInfos.get(listIndex))) {
+                        if (count < 6) {
+                            if (orientation == 'r') {
+                                Toast toast = Toast.makeText(LunchBox.this, "Added to the lunchBox!", Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                                pickedList.add(foodInfos.get(listIndex));
+                                if (listIndex < foodInfos.size()) {
+                                    listIndex++;
+                                }
+                                if (listIndex == foodInfos.size()) {
+                                    for (int index = 0; index < foodInfos.size(); index++) {
+                                        if (!pickedList.contains(foodInfos.get(index))) {
+                                            Glide.with(this).load(foodInfos.get(index).getFoodImage()).into(iv_foodImage);
+                                            tv_foodName.setText(foodInfos.get(index).getFoodName());
+                                            listIndex = index;
+                                            break;
+                                        }
+                                    }
+                                } else {
+                                    Glide.with(this).load(foodInfos.get(listIndex).getFoodImage()).into(iv_foodImage);
+                                    tv_foodName.setText(foodInfos.get(listIndex).getFoodName());
+                                }
+                                count++;
+                                TextView tv_userPickedSum = (TextView) findViewById(R.id.count);
+                                tv_userPickedSum.setText(count + " / 6");
+                            } else {
+                                Toast toast1 = Toast.makeText(LunchBox.this, "Looks like u dont like it!", Toast.LENGTH_SHORT);
+                                toast1.setGravity(Gravity.CENTER, 0, 0);
+                                toast1.show();
+                                if (listIndex < foodInfos.size()) {
+                                    listIndex++;
+                                }
+                                if (listIndex == foodInfos.size()) {
+                                    for (int index = 0; index < foodInfos.size(); index++) {
+                                        if (!pickedList.contains(foodInfos.get(index))) {
+                                            Glide.with(this).load(foodInfos.get(index).getFoodImage()).into(iv_foodImage);
+                                            tv_foodName.setText(foodInfos.get(index).getFoodName());
+                                            listIndex = index;
+                                            break;
+                                        }
+                                    }
+                                } else {
+                                    Glide.with(this).load(foodInfos.get(listIndex).getFoodImage()).into(iv_foodImage);
+                                    tv_foodName.setText(foodInfos.get(listIndex).getFoodName());
+                                }
                             }
-                            imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
-                            textView.setText(foodName[i]);
-                            count++;
-                            TextView textView1 = (TextView) findViewById(R.id.count);
-                            textView1.setText(count + "/6");
+                            // Display display = getWindowManager().getDefaultDisplay();
+                            //   int height = display.getHeight();
+                            //  Toast toast = Toast.makeText(LunchBox.this, "", Toast.LENGTH_SHORT);
+                            // toast.setGravity(Gravity.TOP, 0, 5 * (height / 8));
+                            //   toast.show();
                         } else {
-                            Toast toast1 = Toast.makeText(LunchBox.this, "Looks like u dont like it!", Toast.LENGTH_SHORT);
+                            Toast toast1 = Toast.makeText(LunchBox.this, "You have already picked 6, submit and check the score!", Toast.LENGTH_SHORT);
                             toast1.setGravity(Gravity.CENTER, 0, 0);
                             toast1.show();
-                            if (i < 9) {
-                                i++;
-                            }
-                            imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), imageSoursFood[i]));
-                            textView.setText(foodName[i]);
-
                         }
-                        // Display display = getWindowManager().getDefaultDisplay();
-                        //   int height = display.getHeight();
-                        //  Toast toast = Toast.makeText(LunchBox.this, "", Toast.LENGTH_SHORT);
-                        // toast.setGravity(Gravity.TOP, 0, 5 * (height / 8));
-                        //   toast.show();
-                    }else{
-                        Toast toast1 = Toast.makeText(LunchBox.this, "Your already pick 6,submit and see the score!", Toast.LENGTH_SHORT);
-                        toast1.setGravity(Gravity.CENTER, 0, 0);
-                        toast1.show();
-                       // Intent intent1 = new Intent(LunchBox.this, LunchBoxResult.class);
-                        //startActivity(intent1);
+                    } else if (pickedList.contains(foodInfos.get(listIndex))) {
+                        listIndex++;
+                    } else if (listIndex >= foodInfos.size()) {
+                        listIndex = 0;
                     }
                 }
                 break;
@@ -177,7 +209,6 @@ public class LunchBox extends AppCompatActivity {
             return dy > 0 ? 'b' : 't';
         }
     }
-
 
 }
 

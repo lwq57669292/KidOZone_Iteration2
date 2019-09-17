@@ -65,8 +65,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/apple" />
+        android:layout_marginTop="100dp" />
 
     <TextView
         android:id="@+id/count"
