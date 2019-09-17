@@ -192,7 +192,7 @@ public class Waste extends AppCompatActivity {
                                 break;
                         }
                     }else{
-                        imageView.setImageDrawable(null);
+                        imageView.setImageDrawable(getResources().getDrawable((R.drawable.wastegameend)));
                         textView.setText("");
                     }
                     // Display display = getWindowManager().getDefaultDisplay();
