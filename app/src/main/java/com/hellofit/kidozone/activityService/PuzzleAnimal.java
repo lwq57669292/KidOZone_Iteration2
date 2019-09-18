@@ -24,6 +24,7 @@ public class PuzzleAnimal extends AppCompatActivity implements PuzzleGame.GameSt
     private ImageView srcImg;
     private TextView tvLevel;
     private SelectImageDialog selectImageDialog;
+    private MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +33,20 @@ public class PuzzleAnimal extends AppCompatActivity implements PuzzleGame.GameSt
         initView();
         initListener();
 
+        mp = MediaPlayer.create(PuzzleAnimal.this, R.raw.animaldes);
+        mp.start();
+
         Button backButton = (Button) findViewById(R.id.backButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 Intent intent = new Intent(PuzzleAnimal.this, Puzzle.class);
                 startActivityForResult(intent, 1);
             }
         });
 
-        MediaPlayer mp = MediaPlayer.create(PuzzleAnimal.this, R.raw.animaldes);
-        mp.start();
 
 
     }

@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <Button
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_style1"
-        android:text="Back" />
-
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/back_button_pic" />
 
     <ImageView
         android:id="@+id/rubbish"
@@ -26,9 +26,9 @@
     <ImageView
         android:id="@+id/imageDes"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/template1" />
+        app:srcCompat="@drawable/bin_title" />
 
     <TextView
         android:id="@+id/rubbishName"
@@ -50,6 +50,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
         android:text="Score: "
+        android:textColor="#F10412"
         android:textSize="18sp" />
 
 

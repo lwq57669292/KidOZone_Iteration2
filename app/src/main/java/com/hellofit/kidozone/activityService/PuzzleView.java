@@ -24,6 +24,7 @@ public class PuzzleView extends AppCompatActivity implements PuzzleGame.GameStat
     private ImageView srcImg;
     private TextView tvLevel;
     private SelectImageDialogView selectImageDialog;
+    private MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +33,19 @@ public class PuzzleView extends AppCompatActivity implements PuzzleGame.GameStat
         initView();
         initListener();
 
+        mp = MediaPlayer.create(PuzzleView.this, R.raw.viewdes);
+        mp.start();
+
         Button backButton = (Button) findViewById(R.id.backButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                mp.stop();
                 Intent intent = new Intent(PuzzleView.this, Puzzle.class);
                 startActivityForResult(intent, 1);
             }
         });
-
-        MediaPlayer mp = MediaPlayer.create(PuzzleView.this, R.raw.viewdes);
-        mp.start();
-
-
 
     }
 

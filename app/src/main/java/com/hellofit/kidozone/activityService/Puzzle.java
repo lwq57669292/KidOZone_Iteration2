@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.hellofit.kidozone.R;
 
@@ -18,11 +17,11 @@ public class Puzzle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.puzzle);
 
-        ImageButton imageAnimal = (ImageButton) findViewById(R.id.imageAnimal);
+        Button imageAnimal = (Button) findViewById(R.id.imageAnimal);
 
         imageAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(Puzzle.this, PuzzleAnimal.class);
                 startActivity(intent);
             }
@@ -38,7 +37,7 @@ public class Puzzle extends AppCompatActivity {
             }
         });
 
-        ImageButton imageSport = (ImageButton) findViewById(R.id.imageSport);
+        Button imageSport = (Button) findViewById(R.id.imageSport) ;
 
         imageSport.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +58,7 @@ public class Puzzle extends AppCompatActivity {
         });
 
 
-        ImageButton imageView = (ImageButton) findViewById(R.id.imageView);
+        Button imageView = (Button) findViewById(R.id.imageView);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,9 +88,7 @@ public class Puzzle extends AppCompatActivity {
             }
         });
 
-
     }
-
 
 }
 

@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -35,6 +36,8 @@ public class Waste extends AppCompatActivity {
 
     // The list to contain the waste entity which using in the game
     private ArrayList<WasteInfo> wasteInfos;
+
+    LottieAnimationView lottieAnimationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,8 @@ public class Waste extends AppCompatActivity {
 
         score = 100;
         tv_userScore.setText("Score: "+ score);
+
+        lottieAnimationView = (LottieAnimationView) findViewById(R.id.animation_view4);
     }
 
     @Override
@@ -79,6 +84,10 @@ public class Waste extends AppCompatActivity {
 
         ImageView iv_wasteImge = (ImageView) findViewById(R.id.rubbish);
         TextView tv_wasteName = (TextView) findViewById(R.id.rubbishName);
+
+        if (listIndex == 0) {
+            Glide.with(this).load(R.drawable.fivestar).into(lottieAnimationView);
+        }
 
         float x = event.getX();
         float y = event.getY();
@@ -117,20 +126,32 @@ public class Waste extends AppCompatActivity {
                                     Toast toast = Toast.makeText(Waste.this, "Added to the YellowBin!", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.BOTTOM, 0, 200);
                                     toast.show();
-                                    Glide.with(this).load(wasteInfos.get(listIndex + 1).getWasteImage()).into(iv_wasteImge);
-                                    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
-                                    iv_wasteImge.startAnimation(shake);
-                                    tv_wasteName.setText(wasteInfos.get(listIndex + 1).getWasteName());
-                                    listIndex++;
+                                    if (listIndex < wasteInfos.size() - 1) {
+                                        Glide.with(this).load(wasteInfos.get(listIndex + 1).getWasteImage()).into(iv_wasteImge);
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        iv_wasteImge.startAnimation(shake);
+                                        tv_wasteName.setText(wasteInfos.get(listIndex + 1).getWasteName());
+                                        listIndex++;
+                                    } else {
+                                        listIndex++;
+                                        Glide.with(this).load(R.drawable.wastegameend).into(iv_wasteImge);
+                                        tv_wasteName.setText("");
+                                        break;
+                                    }
                                 } else {
                                     MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.wrong);
                                     mp1.start();
                                     Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.BOTTOM, 0, 200);
                                     toast.show();
-                                    score = score - 5;
-                                    TextView tv_userScore = (TextView) findViewById(R.id.wasteScore);
-                                    tv_userScore.setText("Score: "+ score);
+                                    if (score > 0) {
+                                        score = score - 5;
+                                        TextView tv_userScore = (TextView) findViewById(R.id.wasteScore);
+                                        tv_userScore.setText("Score: " + score);
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake_text);
+                                        tv_userScore.startAnimation(shake);
+                                        setStarPic(score);
+                                    }
                                 }
                                 break;
                             // To Left -> Red Bin
@@ -141,20 +162,32 @@ public class Waste extends AppCompatActivity {
                                     Toast toast = Toast.makeText(Waste.this, "Added to the RedBin!", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.BOTTOM, 0, 200);
                                     toast.show();
-                                    Glide.with(this).load(wasteInfos.get(listIndex + 1).getWasteImage()).into(iv_wasteImge);
-                                    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
-                                    iv_wasteImge.startAnimation(shake);
-                                    tv_wasteName.setText(wasteInfos.get(listIndex + 1).getWasteName());
-                                    listIndex++;
+                                    if (listIndex < wasteInfos.size() - 1) {
+                                        Glide.with(this).load(wasteInfos.get(listIndex + 1).getWasteImage()).into(iv_wasteImge);
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        iv_wasteImge.startAnimation(shake);
+                                        tv_wasteName.setText(wasteInfos.get(listIndex + 1).getWasteName());
+                                        listIndex++;
+                                    } else {
+                                        listIndex++;
+                                        Glide.with(this).load(R.drawable.wastegameend).into(iv_wasteImge);
+                                        tv_wasteName.setText("");
+                                        break;
+                                    }
                                 } else {
                                     MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.wrong);
                                     mp1.start();
                                     Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.BOTTOM, 0, 200);
                                     toast.show();
-                                    score = score - 5;
-                                    TextView tv_userScore = (TextView) findViewById(R.id.wasteScore);
-                                    tv_userScore.setText("Score: "+ score);
+                                    if (score > 0) {
+                                        score = score - 5;
+                                        TextView tv_userScore = (TextView) findViewById(R.id.wasteScore);
+                                        tv_userScore.setText("Score: " + score);
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake_text);
+                                        tv_userScore.startAnimation(shake);
+                                        setStarPic(score);
+                                    }
                                 }
                                 break;
                             // To Top -> Green Bin
@@ -165,20 +198,32 @@ public class Waste extends AppCompatActivity {
                                     Toast toast = Toast.makeText(Waste.this, "Added to the GreenBin!", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.BOTTOM, 0, 200);
                                     toast.show();
-                                    Glide.with(this).load(wasteInfos.get(listIndex + 1).getWasteImage()).into(iv_wasteImge);
-                                    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
-                                    iv_wasteImge.startAnimation(shake);
-                                    tv_wasteName.setText(wasteInfos.get(listIndex + 1).getWasteName());
-                                    listIndex++;
+                                    if (listIndex < wasteInfos.size() - 1) {
+                                        Glide.with(this).load(wasteInfos.get(listIndex + 1).getWasteImage()).into(iv_wasteImge);
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                                        iv_wasteImge.startAnimation(shake);
+                                        tv_wasteName.setText(wasteInfos.get(listIndex + 1).getWasteName());
+                                        listIndex++;
+                                    } else {
+                                        listIndex++;
+                                        Glide.with(this).load(R.drawable.wastegameend).into(iv_wasteImge);
+                                        tv_wasteName.setText("");
+                                        break;
+                                    }
                                 } else {
                                     MediaPlayer mp1 = MediaPlayer.create(Waste.this, R.raw.wrong);
                                     mp1.start();
                                     Toast toast = Toast.makeText(Waste.this, "Not that bin, try again.", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.BOTTOM, 0, 200);
                                     toast.show();
-                                    score = score - 5;
-                                    TextView tv_userScore = (TextView) findViewById(R.id.wasteScore);
-                                    tv_userScore.setText("Score: "+ score);
+                                    if (score > 0) {
+                                        score = score - 5;
+                                        TextView tv_userScore = (TextView) findViewById(R.id.wasteScore);
+                                        tv_userScore.setText("Score: " + score);
+                                        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake_text);
+                                        tv_userScore.startAnimation(shake);
+                                        setStarPic(score);
+                                    }
                                 }
                                 break;
                         }
@@ -206,6 +251,24 @@ public class Waste extends AppCompatActivity {
         } else {
             //Y axis move
             return dy > 0 ? 'b' : 't';
+        }
+    }
+
+    private void setStarPic(int score) {
+        if (score >= 80) {
+            Glide.with(this).load(R.drawable.fivestar).into(lottieAnimationView);
+        }
+        if ((score < 80) && (score >= 60)) {
+            Glide.with(this).load(R.drawable.fourstar).into(lottieAnimationView);
+        }
+        if (score < 60 && score >= 40) {
+            Glide.with(this).load(R.drawable.threestar).into(lottieAnimationView);
+        }
+        if (score < 40 && score >= 20) {
+            Glide.with(this).load(R.drawable.twostar).into(lottieAnimationView);
+        }
+        if (score < 20) {
+            Glide.with(this).load(R.drawable.onestar).into(lottieAnimationView);
         }
     }
 

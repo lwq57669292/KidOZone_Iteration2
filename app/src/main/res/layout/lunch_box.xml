@@ -32,24 +32,24 @@
 
     <Button
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/button_style1"
-        android:text="Back" />
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/back_button_pic" />
 
 
     <Button
         android:id="@+id/finish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/button_style1"
-        android:text="Submit" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/submit_button_pic" />
 
     <ImageView
         android:id="@+id/lunchbox"

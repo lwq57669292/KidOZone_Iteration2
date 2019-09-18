@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     // The list to contain the waste entity which using in the game
     private ArrayList<WasteInfo> wasteInfos;
 
+    MediaPlayer mp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +42,26 @@ public class MainActivity extends AppCompatActivity {
         foodInfos = new ArrayList<FoodInfo>();
         wasteInfos = new ArrayList<WasteInfo>();
 
+        mp = MediaPlayer.create(MainActivity.this, R.raw.background_music);
+        mp.start();
+
+        Button buttonAboutUs = (Button) findViewById(R.id.aboutUsButton);
+
+        buttonAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp.stop();
+                Intent intent = new Intent(MainActivity.this, AboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button buttonLunch = (Button) findViewById(R.id.LunchGame);
 
         buttonLunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                mp.stop();
                 Intent intent = new Intent(MainActivity.this, LunchBox.class);
                 SharedPreferences.Editor editor = getSharedPreferences("SystemSP", MODE_PRIVATE).edit();
                 Gson gson = new Gson();
@@ -55,11 +72,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton imageLunch = (ImageButton) findViewById(R.id.imageLunchGame);
+        Button imageLunch = (Button) findViewById(R.id.imageLunchGame);
 
         imageLunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 Intent intent = new Intent(MainActivity.this, LunchBox.class);
                 SharedPreferences.Editor editor = getSharedPreferences("SystemSP", MODE_PRIVATE).edit();
                 Gson gson = new Gson();
@@ -75,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         buttonWaste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                mp.stop();
                 Intent intent = new Intent(MainActivity.this, Waste.class);
                 SharedPreferences.Editor editor = getSharedPreferences("SystemSP", MODE_PRIVATE).edit();
                 Gson gson = new Gson();
@@ -85,11 +104,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton imageWaste = (ImageButton) findViewById(R.id.imageWasteGame);
+        Button imageWaste = (Button) findViewById(R.id.imageWasteGame);
 
         imageWaste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 Intent intent = new Intent(MainActivity.this, Waste.class);
                 SharedPreferences.Editor editor = getSharedPreferences("SystemSP", MODE_PRIVATE).edit();
                 Gson gson = new Gson();
@@ -105,16 +125,18 @@ public class MainActivity extends AppCompatActivity {
         buttonPuzzle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                mp.stop();
                 Intent intent = new Intent(MainActivity.this, Puzzle.class);
                 startActivityForResult(intent, 1);
             }
         });
 
-        ImageButton imagePuzzle = (ImageButton) findViewById(R.id.imagePuzzleGame);
+        Button imagePuzzle = (Button) findViewById(R.id.imagePuzzleGame);
 
         imagePuzzle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 Intent intent = new Intent(MainActivity.this, Puzzle.class);
                 startActivity(intent);
             }
