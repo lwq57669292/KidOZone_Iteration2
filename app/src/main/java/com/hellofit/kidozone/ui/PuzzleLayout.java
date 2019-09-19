@@ -56,7 +56,8 @@ public class PuzzleLayout extends FrameLayout implements View.OnClickListener {
 
     private boolean isAnimation = false;
 
-    private int res = R.drawable.puzzledefault;
+    // Default picture of puzzle Game
+    private int res = R.drawable.puzzle_default;
 
     public PuzzleLayout(Context context) {
         this(context, null);

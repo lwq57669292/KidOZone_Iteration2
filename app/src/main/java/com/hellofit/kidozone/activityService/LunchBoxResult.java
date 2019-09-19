@@ -44,7 +44,6 @@ public class LunchBoxResult extends AppCompatActivity {
             }
         });
 
-        score = 100;
         ImageView imageView1 = (ImageView) findViewById(R.id.imageFood1);
         ImageView imageView2 = (ImageView) findViewById(R.id.imageFood2);
         ImageView imageView3 = (ImageView) findViewById(R.id.imageFood3);
@@ -56,12 +55,14 @@ public class LunchBoxResult extends AppCompatActivity {
         ArrayList<FoodInfo> resultList = (ArrayList<FoodInfo>) bundle.getSerializable("pickItemList");
         switch (resultList.size()) {
             case 1:
+                score = 60;
                 Glide.with(this).load(resultList.get(0).getFoodImage()).into(imageView1);
                 if (resultList.get(0).getCategoryName().equals("junks")) {
                     score = score - 10;
                 }
                 break;
             case 2:
+                score = 70;
                 Glide.with(this).load(resultList.get(0).getFoodImage()).into(imageView1);
                 Glide.with(this).load(resultList.get(1).getFoodImage()).into(imageView4);
                 for (int i = 0; i < resultList.size(); i++) {
@@ -76,6 +77,7 @@ public class LunchBoxResult extends AppCompatActivity {
                 }
                 break;
             case 3:
+                score = 80;
                 Glide.with(this).load(resultList.get(0).getFoodImage()).into(imageView1);
                 Glide.with(this).load(resultList.get(1).getFoodImage()).into(imageView4);
                 Glide.with(this).load(resultList.get(2).getFoodImage()).into(imageView2);
@@ -91,6 +93,7 @@ public class LunchBoxResult extends AppCompatActivity {
                 }
                 break;
             case 4:
+                score = 90;
                 Glide.with(this).load(resultList.get(0).getFoodImage()).into(imageView1);
                 Glide.with(this).load(resultList.get(1).getFoodImage()).into(imageView4);
                 Glide.with(this).load(resultList.get(2).getFoodImage()).into(imageView2);
@@ -107,6 +110,7 @@ public class LunchBoxResult extends AppCompatActivity {
                 }
                 break;
             case 5:
+                score = 100;
                 Glide.with(this).load(resultList.get(0).getFoodImage()).into(imageView1);
                 Glide.with(this).load(resultList.get(1).getFoodImage()).into(imageView4);
                 Glide.with(this).load(resultList.get(2).getFoodImage()).into(imageView2);
@@ -124,6 +128,7 @@ public class LunchBoxResult extends AppCompatActivity {
                 }
                 break;
             case 6:
+                score = 100;
                 Glide.with(this).load(resultList.get(0).getFoodImage()).into(imageView1);
                 Glide.with(this).load(resultList.get(1).getFoodImage()).into(imageView4);
                 Glide.with(this).load(resultList.get(2).getFoodImage()).into(imageView2);
@@ -144,20 +149,29 @@ public class LunchBoxResult extends AppCompatActivity {
                 break;
         }
 
-        TextView textView = (TextView) findViewById(R.id.textResult);
-        TextView textView1 = (TextView) findViewById(R.id.textResultExplain);
-        textView.setText("Your score is: " + score);
+        ImageView iv_result = (ImageView) findViewById(R.id.imageResult);
+        TextView textView = (TextView) findViewById(R.id.textResultExplain);
+
         if (score >= 80) {
-            textView1.setText(("Great lunchbox!"));
+            Glide.with(this).load(R.drawable.fivestar).into(iv_result);
+            textView.setText(("Great lunchbox!"));
         }
         if ((score < 80) && (score >= 60)) {
-            textView1.setText(("Good, maybe can better more."));
+            Glide.with(this).load(R.drawable.fourstar).into(iv_result);
+            textView.setText(("Good, maybe better next time."));
         }
-        if (score < 60) {
-            textView1.setText(("You can have a more healthy lunchbox."));
+        if (score < 60 && score >= 40) {
+            Glide.with(this).load(R.drawable.threestar).into(iv_result);
+            textView.setText(("Good, maybe better next time."));
         }
-
-
+        if (score < 40 && score >= 20) {
+            Glide.with(this).load(R.drawable.twostar).into(iv_result);
+            textView.setText(("You can have a more healthy lunchbox."));
+        }
+        if (score < 20) {
+            Glide.with(this).load(R.drawable.onestar).into(iv_result);
+            textView.setText(("You can have a more healthy lunchbox."));
+        }
     }
 
     private class getFoodPictureAsyncTask extends AsyncTask<String, Void, String> {

@@ -3,16 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <ImageView
         android:id="@+id/description"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="Australia have many unique animals, try to know them!"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        android:textStyle="bold|italic" />
+        android:layout_height="60dp"
+        android:background="@drawable/animal_title"
+        android:layout_centerHorizontal="true" />
 
 
     <com.hellofit.kidozone.ui.PuzzleLayout
@@ -72,12 +68,12 @@
 
     <Button
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Back"
-        android:background="@drawable/button_style1"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/back_button_pic"/>
 
 
 

@@ -24,6 +24,7 @@ public class PuzzleSport extends AppCompatActivity implements PuzzleGame.GameSta
     private ImageView srcImg;
     private TextView tvLevel;
     private SelectImageDialogSport selectImageDialog;
+    private MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +33,19 @@ public class PuzzleSport extends AppCompatActivity implements PuzzleGame.GameSta
         initView();
         initListener();
 
+        mp = MediaPlayer.create(PuzzleSport.this, R.raw.sportdes);
+        mp.start();
+
         Button backButton = (Button) findViewById(R.id.backButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                mp.stop();
                 Intent intent = new Intent(PuzzleSport.this, Puzzle.class);
                 startActivityForResult(intent, 1);
             }
         });
-
-        MediaPlayer mp = MediaPlayer.create(PuzzleSport.this, R.raw.sportdes);
-        mp.start();
-
-
-
     }
 
     private void initView() {

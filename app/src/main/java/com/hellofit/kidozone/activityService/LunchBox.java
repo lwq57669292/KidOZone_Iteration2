@@ -45,6 +45,8 @@ public class LunchBox extends AppCompatActivity {
     private ArrayList<FoodInfo> foodInfos;
     private ArrayList<FoodInfo> pickedList;
 
+    private MediaPlayer mp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,9 @@ public class LunchBox extends AppCompatActivity {
         foodInfos = new ArrayList<FoodInfo>();
         pickedList = new ArrayList<FoodInfo>();
 
+        mp = MediaPlayer.create(LunchBox.this, R.raw.lunchbox_intro);
+        mp.start();
+
         // Load Waste data from SharedPreferences
         SharedPreferences sp = getSharedPreferences("SystemSP", MODE_PRIVATE);
         String json = sp.getString("foodList", null);
@@ -73,6 +78,7 @@ public class LunchBox extends AppCompatActivity {
         btn_goResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 Intent intent = new Intent(LunchBox.this, LunchBoxResult.class);
                 bundle.putSerializable("pickItemList", pickedList);
                 intent.putExtras(bundle);
@@ -83,6 +89,7 @@ public class LunchBox extends AppCompatActivity {
         btn_backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 Intent intent = new Intent(LunchBox.this, MainActivity.class);
                 startActivityForResult(intent, 1);
             }
@@ -156,6 +163,9 @@ public class LunchBox extends AppCompatActivity {
                                 count++;
                                 TextView tv_userPickedSum = (TextView) findViewById(R.id.count);
                                 tv_userPickedSum.setText(count + " / 6");
+                                Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake_text);
+                                tv_userPickedSum.startAnimation(shake);
+
                             } else {
                                 Toast toast1 = Toast.makeText(LunchBox.this, "Looks like u dont like it!", Toast.LENGTH_SHORT);
                                 toast1.setGravity(Gravity.CENTER, 0, 0);
